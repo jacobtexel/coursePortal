@@ -15,6 +15,9 @@ urlpatterns = patterns('',
 
     url(r'^submit/(\d+)?/?$', 'web.views.submission.index', name='submit'),
 
+    url(r'^question/(?P<id>\d+)/?$', 'web.views.question.detail', name='question_detail'),
+    url(r'^question/?$', 'web.views.question.index', name='question'),
+
     url(r'^post/(\d+)/?$', 'web.views.home.post', name='post'),
     url(r'^category/(\d+)/?$', 'web.views.home.category', name='category'),
     url(r'^$', 'web.views.home.index', name='home'),
